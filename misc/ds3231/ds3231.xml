@@ -1,0 +1,44 @@
+<!--?xml version="1.0" encoding="utf-8"?-->
+<component version="1.5" xmlns="http://schemas.circuit-diagram.org/circuitDiagramDocument/2012/component/xml">
+  <declaration>
+    <meta name="name"    value="DS3231" />
+    <meta name="author"  value="nullptr-deref" />
+    <meta name="version" value="1.0" />
+    <meta name="guid"    value="8a3d64fc-0987-4d00-b788-0b744f6bc8fd" />
+    <meta name="minsize" value="90" />
+    <meta name="canflip" value="false" />
+
+    <flags>
+      <option>HorizontalOnly</option>
+    </flags>
+  </declaration>
+
+  <connections>
+    <connection name="32K" start="_Start+10x"     end="_Start"     edge="end" />
+    <connection name="SQW" start="_Start+10x+20y" end="_Start+20y" edge="end" />
+    <connection name="SCL" start="_Start+10x+40y" end="_Start+40y" edge="end" />
+    <connection name="SDA" start="_End-10x"       end="_End"       edge="end" />
+    <connection name="VCC" start="_End-10x+20y"   end="_End+20y"   edge="end" />
+    <connection name="GND" start="_End-10x+40y"   end="_End+40y"   edge="end" />
+  </connections>
+
+  <render>
+    <rect x="_Middle-35" y="_Middle-30" width="70" height="80" />
+    <line start="_Start"     end="_Middle-35x" />
+    <line start="_Start+20y" end="_Middle-35x+20y" />
+    <line start="_Start+40y" end="_Middle-35x+40y" />
+
+    <line start="_Middle+35x"     end="_End" />
+    <line start="_Middle+35x+20y" end="_End+20y" />
+    <line start="_Middle+35x+40y" end="_End+40y" />
+
+    <text value="32K" x="_Middle-30"   y="_Start"    align="CentreLeft" />
+    <text value="SQW" x="_Middle-30"   y="_Start+20" align="CentreLeft" />
+    <text value="SCL" x="_Middle-30"   y="_Start+40" align="CentreLeft" />
+    <text value="SDA" x="_Middle+30"   y="_End"      align="CentreRight" />
+    <text value="VCC" x="_Middle+30"   y="_End+20"   align="CentreRight" />
+    <text value="GND" x="_Middle+30"   y="_End+40"   align="CentreRight" />
+
+    <text value="DS3231" x="_Middle" y="_Middle-20" align="CentreCentre" />
+  </render>
+</component>
